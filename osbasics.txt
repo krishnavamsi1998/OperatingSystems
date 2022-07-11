@@ -1,0 +1,195 @@
+operating systems : It is an interface between user and computer which allows user 
+to handle or utilize the cpu in an effective way
+
+operating systems performs various tasks:
+
+1.Process management
+2.Memory management
+3.Cpu scheduling
+4.File management
+
+Process :
+
+A process is a program in execution.
+So an active program is a process.
+
+Ex : opening browser, playing game , dearching for a file
+
+Attributes of a process :
+
+1. Process ID
+
+A unique id is assigned to the process
+
+2. Program counter 
+
+It stores the adress of the last instruction
+
+3. Process state
+
+New , Ready , Running , waiting, Termination
+
+Arrival Time :
+
+The time at which process enters the ready queue is called arrival time
+
+Burst Time :
+
+The total time required by cpu to execute the process is called burst time
+
+Completion time :
+
+The time at which process completes its exection is called completion time
+
+Turn Around time :
+
+The total time of a process from its arrival to its completion is called Turn Around time
+
+Long term scheduler :
+
+The task of the long scheuler is to pick a process/job from the ready secondary memory
+and keep it in primary memory 
+
+Short term scheduler :
+
+The task is to dispatch a process which is in ready queue to cpu for execution
+
+
+Context swiching :
+
+ Whenevr a process which is in running state and requests
+some i/o operation, the scheduler will save it context which is also called as
+ pcb(process control block) and this process goes into waiting state and picks up the 
+next process, this process is called context switching
+
+Pcb(Process control block):
+
+This saves the info about the process such as ProcessID,Process state,io info etc.
+
+Turn around time = Completion time - Burst Time
+
+Waiting time = Turn around time - burst time
+
+Scheduling alogorithms :
+
+FCFS(First come first serve):
+
+Its a non preemptive type of algorithms which schedules the jobs according to the
+arrival time , It executes the job which has lesser arrival time 
+
+Disadvatage :
+
+Starvation
+
+SJF(Shortest Job First):
+
+Its a non preemptive type of algorithm which schedules the jobs according to thier
+Burst time , The lesser is the the sooner will the cpu executes the process
+
+Disdvantage :
+
+starvation
+
+Round rabin alogorithm :
+
+It is preemptive algorithm where a time quantum is defineda nd the processes exceutes 
+for this particular amount of time quantum and if their execution time has completed 
+they will termainate or else they will get back to ready queue and wait for the next turn
+
+NON Premptive algorithm : whenever a cpu starts exceuting a proces it compltes its exceution
+at a time .
+
+Premptive algorihm : The currently excuting process may interrupted in middlea and cpu
+may start executing another process which have high priority
+
+
+Dead Lock : It is a situation where a process waits for a resource which is being
+assigned to other process which inturn waiting for some other resource in this case none
+of the process will be excuted and the process may go into infinte waiting state
+
+Conditins for a dead lock :
+
+1. Mutual exclusion : No Two processes holding the resources at same time 
+
+2. Hold and wait : process holding and waiting for some other resource
+
+3. No premption : Process shoud execute at a go
+
+4.Circular wait : The last process is waiting for a resource which is being held by the
+first process
+
+1.Deadlock ignorance
+
+2.Dead lock avoidance(Resource allocation graph) 
+
+3.Dead lock prevention(Vioate one of four conditions)
+
+4.Deadlock detection and recovery(kill process or rollback to safe state)
+
+Bankers algortihm (Deadlock avoidance algorithm):
+
+work[i]=available[i]
+finish[i]=false
+
+while(1)
+{
+if(finish[i]==flase and need[i]<=work[i])
+{
+work[i]+=allocation[i]
+finish[i]=true
+
+}
+else
+if finish[i]==true for all finish[i]
+break
+}
+
+
+Memory management :
+
+Paging :
+
+Suppose a process needs 2mb of memory main memory has that 2mb in different 
+locations i.e it is not contagious So for this the process is divided into some parts
+called pages and these pages are filled in those respective available memory partitions
+
+Virtual Memory :
+
+Virtual Memory is a storage mechanism where user gets an illusion of having a bigger
+main memory This illusion is due to loading multiple process at same time 
+
+Demand paging :
+
+A page is loaded whenever it is required 
+
+Page fault : whenever a page is required but not present in the main memory
+
+Thrashing : If page fault rate is high we call it as thrashing
+
+File management : Allows you to store files in different directories  
+
+
+
+
+
+
+	
+
+
+
+ 
+
+ 
+
+ 
+
+
+  
+
+
+
+
+
+
+
+
